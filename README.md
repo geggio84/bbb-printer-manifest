@@ -49,8 +49,8 @@ your connection.
 
 **4.  Initialize the Yocto Project Build Environment.**
 
-    $ export TEMPLATECONF=meta-bbb-printer/conf/conf-x11-image // For X11 image
-    $ export TEMPLATECONF=meta-bbb-printer/conf/conf-qt5-image // For QT5 image
+    $ export TEMPLATECONF=$PWD/poky/meta-bbb-printer/conf/conf_x11_image // For X11 image
+    $ export TEMPLATECONF=$PWD/poky/meta-bbb-printer/conf/conf_qt5_image // For QT5 image
     $ source ./poky/oe-init-build-env
 
 This copies default configuration information into the **poky/build/conf**
