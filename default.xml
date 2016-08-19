@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com/geggio84" name="geggio84"/>
+  <remote fetch="git://github.com/meta-qt5" name="qt5"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+
+  <default remote="bbb-printer" revision="default"/>
+  <!-- List all the repositories you want to fetch -->
+  <!-- "name": git repository's name on hosting server
+       "remote": the remote host from above (if not the default)
+       "revision": commitish to checkout (if not the default)
+       "path": directory where git repository gets cloned/synced -->
+  <project name="meta-qt5" path="poky/meta-qt5" remote="qt5" revision="90919b9d86988e7da01fa2c0a07246b5b5600a5d" upstream="refs/heads/fido"/>
+  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="df2f700d66bace65f5d802225232d01cf511fe81" upstream="refs/heads/fido"/>
+  <project name="meta-bbb-printer" path="poky/meta-bbb-printer" remote="geggio84" revision="79ca6e27500b684faf20beb45e6a3c55ea91fc84" upstream="refs/heads/master"/>
+  <project name="meta-ti" path="poky/meta-ti" remote="yocto" revision="3b27c871dbf67497ea9a953fe3fa0f819c6e41c9" upstream="refs/heads/fido"/>
+  <project name="poky" remote="yocto" revision="51246bfae3b0012a5940ce744816de70ccbf1292" upstream="refs/heads/fido"/>
+</manifest>
