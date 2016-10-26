@@ -12,7 +12,7 @@
        "path": directory where git repository gets cloned/synced -->
   <project name="meta-qt5" path="poky/meta-qt5" remote="qt5" revision="90919b9d86988e7da01fa2c0a07246b5b5600a5d" upstream="refs/heads/fido"/>
   <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="902964a4da26e46018d2a8d17dcdda1ac4627a39" upstream="refs/heads/fido"/>
-  <project name="meta-bbb-printer" path="poky/meta-bbb-printer" remote="geggio84" revision="master" upstream="refs/heads/master"/>
+  <project name="meta-bbb-printer" path="poky/meta-bbb-printer" remote="geggio84" revision="bbb_qt5_3.14" upstream="refs/heads/bbb_qt5_3.14"/>
   <project name="meta-ti" path="poky/meta-ti" remote="yocto" revision="632ea21d490022bbca34ee43bda31bbe5678a779" upstream="refs/heads/fido"/>
   <project name="poky" remote="yocto" revision="c9f0a99050ec0050f0dbcd55d0cd2ab18848113f" upstream="refs/heads/fido"/>
 </manifest>
