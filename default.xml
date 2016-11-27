@@ -20,5 +20,8 @@
   <project name="meta-ti" path="src/meta-ti" remote="arago" revision="c93678aa08bc0df0f1f36a84afe48723406de58e" upstream="refs/heads/fido"/>
   <project name="meta-linaro" path="src/meta-linaro" remote="linaro" revision="10b71bed9cfe76baa22c72806ff814cf85c2f73b" upstream="refs/heads/fido"/>
   <project name="openembedded-core" path="src/oe-core" remote="oe" revision="12520d7f729fe3d07c2f94b813994718edb2d987" upstream="refs/heads/fido"/>
-  <project name="meta-bbb-printer" path="src/meta-bbb-printer" remote="geggio84" revision="bbb_tisdk" upstream="refs/heads/bbb_tisdk"/>
+  <project name="meta-bbb-printer" path="src/meta-bbb-printer" remote="geggio84" revision="bbb_tisdk" upstream="refs/heads/bbb_tisdk">
+  <project path="build" name="platform/build" groups="pdk" >
+    <copyfile src="environment-setup.sh" dest="environment-setup.sh" />
+  </project>
 </manifest>
