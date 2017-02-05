@@ -33,7 +33,7 @@ Create an empty directory to hold your working files:
 
 Tell Repo where to find the manifest:
 
-    $ repo init -u https://github.com/geggio84/bbb-printer-manifest.git -b bbb-tisdk
+    $ repo init -u https://github.com/geggio84/bbb-printer-manifest.git -b bbb-printer
 
 A successful initialization will end with a message stating that Repo is
 initialized in your working directory. Your directory should now
@@ -49,9 +49,9 @@ your connection.
 
 **4.  Initialize the Yocto Project Build Environment.**
 
-    $ export OECORELAYERCONFPATH=$PWD/src/meta-bbb-printer/conf/conf_tisdk/bblayers.conf.sample
-    $ export OECORELOCALCONFPATH=$PWD/src/meta-bbb-printer/conf/conf_tisdk/local.conf.sample
-    $ export export PATH=$HOME/devel/toolchains/gcc-linaro-4.9-2015.05-x86_64_arm-linux-gnueabihf/bin:$PATH
+    $ export OECORELAYERCONFPATH=$PWD/src/meta-bbb-printer/conf/conf_bbb_printer/bblayers.conf.sample
+    $ export OECORELOCALCONFPATH=$PWD/src/meta-bbb-printer/conf/conf_bbb_printer/local.conf.sample
+    $ export PATH=$HOME/devel/toolchains/gcc-linaro-4.9-2015.05-x86_64_arm-linux-gnueabihf/bin:$PATH
     $ . environment-setup.sh
 
 This copies default configuration information into the **poky/build/conf**
@@ -67,7 +67,8 @@ do an awful lot of compilation so make sure you have plenty of space (25GB
 minimum), and expect a day or so of build time depending on your network
 connection.  Don't worry---it is just the first build that takes a while.
 
-    $ bitbake arago-core-tisdk-image
+    $ bitbake bbb-printer-image
+    $ bitbake ramdisk-bbb
 
 If everything goes well, you should have a compressed root filesystem
 tarball as well as kernel and bootloader binaries available in your
